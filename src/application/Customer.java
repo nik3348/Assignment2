@@ -4,6 +4,11 @@ import java.io.Serializable;
 
 public class Customer extends Users implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub

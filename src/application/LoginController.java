@@ -93,7 +93,7 @@ public class LoginController implements Initializable{
 	
 	public void login(ActionEvent event) {		
 		Window owner = login.getScene().getWindow();
-		Boolean wrongCredentials = false;
+		Boolean wrongCredentials = true;
 		
 		if(userName.getText().isEmpty()) {
             AlertHelper.showAlert(AlertType.ERROR, owner, "Form Error!", 
