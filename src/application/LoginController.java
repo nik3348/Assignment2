@@ -118,7 +118,12 @@ public class LoginController implements Initializable{
 			if(userName.getText().equals(u.getUserName()) && passWord.getText().equals(u.getPassWord())) {
 				wrongCredentials = false;
 				if(u.getType().equals("employee")) {
-					
+					try {
+						SceneLoader.loadScene("/scenes/UserScene.fxml");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 				AlertHelper.showAlert(AlertType.ERROR, owner, "Form Error!", 
 	                    "Logged IN");

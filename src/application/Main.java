@@ -11,11 +11,32 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
-		    
+	static Stage primaryStage;
+	static Parent root;
+	
+	
+	public static Stage getPrimaryStage() {
+		return primaryStage;
+	}
+
+	public static void setPrimaryStage(Stage primaryStage) {
+		Main.primaryStage = primaryStage;
+	}
+
+	public static Parent getRoot() {
+		return root;
+	}
+
+	public static void setRoot(Parent root) {
+		Main.root = root;
+	}
+
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/scenes/Login.fxml"));
+			Main.primaryStage = primaryStage;
+			root = FXMLLoader.load(getClass().getResource("/scenes/Login.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add("/scenes/application.css");
 			primaryStage.setScene(scene);

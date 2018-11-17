@@ -1,5 +1,6 @@
 package application;
 
+
 import java.io.Serializable;
 
 public class Customer extends Users implements Serializable{
