@@ -15,7 +15,7 @@ public class AdminE {
 		 Employee e1 = new Employee("123", "123", "e123", "e", 123, true, "123@123.com", "123", 123);
 		 Employee e2 = new Employee("456", "456", "e456", "e", 456, true, "456@456.com", "456", 0456);
 		try {
-			f = new FileOutputStream(new File("src/res/employees.txt"));
+			f = new FileOutputStream(new File("res/files/employees.txt"));
 			o = new ObjectOutputStream(f);
 
 			o.writeObject(e1);
@@ -24,15 +24,15 @@ public class AdminE {
 			f.close();
 			o.close();
 			
-			FileInputStream fi = new FileInputStream(new File("src/res/employees.txt"));
+			FileInputStream fi = new FileInputStream(new File("res/files/employees.txt"));
 			ObjectInputStream oi = new ObjectInputStream(fi);
 
 			// Read objects
 			Employee pr1 = (Employee) oi.readObject();
 			Employee pr2 = (Employee) oi.readObject();
 
-			System.out.println(pr1.toString());
-			System.out.println(pr2.toString());
+			System.out.println(pr1.getUserName());
+			System.out.println(pr2.getUserName());
 
 			oi.close();
 			fi.close();

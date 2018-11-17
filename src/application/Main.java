@@ -15,9 +15,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/scenes/Login.fxml"));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add("application/application.css");
+			scene.getStylesheets().add("/scenes/application.css");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		
@@ -31,12 +31,12 @@ public class Main extends Application {
 		PrintWriter writer = null;
 		try {
 			
-            if(!(new File("src/res/employees.txt").exists()))
-            	writer = new PrintWriter("src/res/employees.txt");
-            if(!(new File("src/res/customers.txt").exists()))
-            	writer = new PrintWriter("src/res/customers.txt");
-            if(!(new File("src/res/films.txt").exists()))
-            	writer = new PrintWriter("src/res/films.txt");
+            if(!(new File("res/files/employees.txt").exists()))
+            	writer = new PrintWriter("res/files/employees.txt");
+            if(!(new File("res/files/customers.txt").exists()))
+            	writer = new PrintWriter("res/customers.txt");
+            if(!(new File("res/files/films.txt").exists()))
+            	writer = new PrintWriter("res/files/films.txt");
             if(writer != null)
             	writer.close();
         } catch (Exception e) {

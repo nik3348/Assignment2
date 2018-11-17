@@ -46,12 +46,12 @@ public class LoginController implements Initializable{
 		
 	}
 
-	public ArrayList<Employee> load(String file) {
-		ArrayList<Employee> list = new ArrayList<Employee>();
+	public ArrayList<Object> load(String file) {
+		ArrayList<Object> list = new ArrayList<Object>();
 		FileInputStream fi;
 		ObjectInputStream oi;
 		try {
-			 fi = new FileInputStream(new File("src/res/" + file));
+			 fi = new FileInputStream(new File("res/files/" + file));
 			 oi = new ObjectInputStream(fi);
 		
 			while (true) {
